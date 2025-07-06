@@ -5831,9 +5831,9 @@ MonoBehaviour:
     sunlight and absorbs less heat, helping to cool the surrounding area.
   fadeDuration: 1
   displayTime: 4
-  cameraChangeLineIndex: 4
-  newCameraPosition: {x: 45, y: 6, z: -3}
-  newCameraRotationEuler: {x: 18.558, y: -5.865, z: 0}
+  switchCamAt: 2
+  camPos: {x: 14.61, y: 0.7, z: -50}
+  camRot: {x: 0, y: 210, z: 0}
   screenFader: {fileID: 1593948608}
 --- !u!1 &1181751211
 GameObject:
@@ -10785,10 +10785,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -10926,7 +10926,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 329931972}
         m_TargetAssemblyTypeName: SceneStateManager, Assembly-CSharp
-        m_MethodName: CloseAndReturnToMain
+        m_MethodName: LoadAppropriateScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

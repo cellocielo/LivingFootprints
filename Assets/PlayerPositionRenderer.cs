@@ -1,19 +1,42 @@
 using UnityEngine;
+using System.Collections;
 
-public class PlayerPositionRestorer : MonoBehaviour
+public class PlayerPositionRestorer : MonoBehaviour 
 {
     void Start()
     {
         if (SceneStateManager.hasStoredPosition)
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null)
+            StartCoroutine(RestorePlayerPositionDelayed());
+        }
+    }
+    
+    IEnumerator RestorePlayerPositionDelayed()
+    {
+        yield return null;
+        
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+        
+            CharacterController controller = player.GetComponent<CharacterController>();
+            if (controller != null)
+            {
+                controller.enabled = false;
+                player.transform.position = SceneStateManager.savedPlayerPosition;
+                controller.enabled = true;
+                Debug.Log($"Used Character Controller method to restore position");
+            }
+            else
             {
                 player.transform.position = SceneStateManager.savedPlayerPosition;
-                Debug.Log($"Restored player position to: {SceneStateManager.savedPlayerPosition}");
-                
-                SceneStateManager.hasStoredPosition = false;
             }
+             
+            SceneStateManager.hasStoredPosition = false;
+        }
+        else
+        {
+            Debug.LogWarning("Player object not found when trying to restore position!");
         }
     }
 }

@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/Menu.unity
     guid: 10b5b6982a58a4d5e8eb48498d82574a
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/FridgeScene.unity
     guid: 7ee34c18d71014840812eef0e1e3dac6
@@ -44,6 +44,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LaundryScene.unity
     guid: 7dd4b55f6d2eb43cfa71f9f32ff71bea
+  - enabled: 1
+    path: Assets/ApartmentScene.unity
+    guid: a3925ba69aed94405aef5c0cfe90c3a9
+  - enabled: 1
+    path: Assets/HouseScene.unity
+    guid: 06f1986d1855842b5a14b8e7d0a75c52
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

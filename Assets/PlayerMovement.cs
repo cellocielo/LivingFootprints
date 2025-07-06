@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour {
     private Vector3 turnVelocity;
 
     void Start() {
+
         CharacterController = GetComponent<CharacterController>();
         if (playerTrans == null) {
             playerTrans = transform;

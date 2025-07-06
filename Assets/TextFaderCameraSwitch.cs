@@ -25,7 +25,8 @@ public class TextFaderCameraSwitch : MonoBehaviour
         StartCoroutine(CycleText());
     }
 
-    IEnumerator CycleText() {
+    IEnumerator CycleText()
+    {
         for (int i = 0; i < messages.Length; i++)
         {
             if (i == switchCamAt)
@@ -43,10 +44,38 @@ public class TextFaderCameraSwitch : MonoBehaviour
         }
 
         textComponent.text = "";
-        SceneManager.LoadScene("SampleScene");
+        
+        string currentScene = SceneManager.GetActiveScene().name;
+        string targetScene = GetTargetSceneFromCurrent(currentScene);
+        SceneManager.LoadScene(targetScene);
     }
 
-    IEnumerator FadeTextAlpha(float from, float to) {
+    private string GetTargetSceneFromCurrent(string currentScene)
+    {
+        switch (currentScene)
+        {
+            case "PlantsScene":
+            case "SolarPanelScene":
+            case "VacuumScene":
+            case "PizzaBoxScene":
+            case "TreeScene":
+            case "RainBarrelScene":
+                return "HouseScene";
+                
+            case "FridgeScene":
+            case "LaundryScene":
+            case "PanScene":
+            case "PillScene":
+            case "EWasteScene":
+                return "ApartmentScene";
+                
+            default:
+                return "SampleScene";
+        }
+    }
+
+    IEnumerator FadeTextAlpha(float from, float to)
+    {
         float t = 0f;
         Color c = textComponent.color;
 
@@ -61,7 +90,8 @@ public class TextFaderCameraSwitch : MonoBehaviour
         textComponent.color = new Color(c.r, c.g, c.b, to);
     }
 
-    IEnumerator FadeScreenAlpha(float from, float to) {
+    IEnumerator FadeScreenAlpha(float from, float to)
+    {
         float t = 0f;
         Color c = screenFader.color;
 
@@ -76,7 +106,8 @@ public class TextFaderCameraSwitch : MonoBehaviour
         screenFader.color = new Color(c.r, c.g, c.b, to);
     }
 
-    void MoveCamera() {
+    void MoveCamera()
+    {
         var cam = Camera.main;
         if (cam == null)
         {

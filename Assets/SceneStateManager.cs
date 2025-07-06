@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneStateManager : MonoBehaviour {
+public class SceneStateManager : MonoBehaviour
+{
     public static bool showFridgeUI = false;
     public static bool showLaundryUI = false;
     public static bool showPlantsUI = false;
@@ -17,6 +18,8 @@ public class SceneStateManager : MonoBehaviour {
     public static Vector3 savedPlayerPosition;
     public static bool hasStoredPosition = false;
 
+
+
     public static void StorePlayerPosition()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -28,9 +31,30 @@ public class SceneStateManager : MonoBehaviour {
         }
     }
 
+    public static void LoadAppropriateScene()
+    {
+        StorePlayerPosition();
+        
+        GameManager.spawnPosition = Vector3.zero;
+
+        string currentScene = SceneManager.GetActiveScene().name;
+        
+        if (currentScene == "PlantsScene" || 
+            currentScene == "VacuumScene" || currentScene == "TreeScene" || 
+            currentScene == "RainBarrelScene" || currentScene == "SolarPanelScene" || 
+            currentScene == "PizzaBoxScene")
+        {
+            SceneManager.LoadScene("HouseScene");
+        }
+        else
+        {
+            SceneManager.LoadScene("ApartmentScene");
+        }
+    }
+
     public static void CloseAndReturnToMain()
     {
-        SceneManager.LoadScene("SampleScene");
+        LoadAppropriateScene();
     }
 
     public static void ResetFlags()

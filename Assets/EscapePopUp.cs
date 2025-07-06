@@ -43,6 +43,7 @@ public class EscapePopup : MonoBehaviour
 
     private void OnYesClicked() {
         SceneManager.LoadScene("Menu");
+        SceneStateManager.ResetFlags();
     }
 
     private void OnNoClicked() {

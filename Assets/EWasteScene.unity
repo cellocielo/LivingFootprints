@@ -6283,15 +6283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a447959989e74f578e63971a08fe492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: 5af363c33878a41a187bc853137ac54e, type: 2}
-  mat2: {fileID: 2100000, guid: 2948fd11a6f9c47df80102e2fa38944c, type: 2}
-  baseColor: {r: 0.24759701, g: 0.3162161, b: 0.49056602, a: 1}
-  glowDuration: 1
-  waitDuration: 2
-  fadeDuration: 1
-  pulseSpeed: 2
-  minEmission: 0
-  maxEmission: 0.5
 --- !u!23 &1142358856
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6611,15 +6602,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a447959989e74f578e63971a08fe492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: a4908fd16c2f54456a808a49cd7df3b2, type: 2}
-  mat2: {fileID: 2100000, guid: a7751db95149d470ebafbe876cc5b4f7, type: 2}
-  baseColor: {r: 0.18689924, g: 0.25866494, b: 0.3773585, a: 1}
-  glowDuration: 1
-  waitDuration: 2
-  fadeDuration: 1
-  pulseSpeed: 2
-  minEmission: 0
-  maxEmission: 1
 --- !u!23 &1274271357
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7016,15 +6998,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a447959989e74f578e63971a08fe492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: c7e0c01ed873542efb68ea8404f20410, type: 2}
-  mat2: {fileID: 2100000, guid: ea19dd07ad6ef44ecb1e332d117d7a38, type: 2}
-  baseColor: {r: 0.047837302, g: 0.23766294, b: 0.4056604, a: 1}
-  glowDuration: 1
-  waitDuration: 2
-  fadeDuration: 1
-  pulseSpeed: 2
-  minEmission: 0
-  maxEmission: 1
 --- !u!23 &1496072517
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7444,7 +7417,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1131718281}
         m_TargetAssemblyTypeName: SceneStateManager, Assembly-CSharp
-        m_MethodName: CloseAndReturnToMain
+        m_MethodName: LoadAppropriateScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7646,15 +7619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a447959989e74f578e63971a08fe492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: 97809acbe0eaf4b10bc02a5ee6c1fd07, type: 2}
-  mat2: {fileID: 2100000, guid: d6c47895c9b784bb49d18127e9f7ff7a, type: 2}
-  baseColor: {r: 0.17782128, g: 0.2516013, b: 0.33962262, a: 1}
-  glowDuration: 1
-  waitDuration: 2
-  fadeDuration: 1
-  pulseSpeed: 2
-  minEmission: 0
-  maxEmission: 1
 --- !u!65 &2052385504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7724,10 +7688,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

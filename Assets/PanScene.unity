@@ -242,10 +242,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -856,7 +856,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1870267678}
         m_TargetAssemblyTypeName: SceneStateManager, Assembly-CSharp
-        m_MethodName: CloseAndReturnToMain
+        m_MethodName: LoadAppropriateScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1147,9 +1147,9 @@ MonoBehaviour:
     in the U.S.
   fadeDuration: 1
   displayTime: 2.5
-  cameraChangeLineIndex: 2
-  newCameraPosition: {x: -59.82, y: 5.13, z: 47.25}
-  newCameraRotationEuler: {x: 177, y: 93.5, z: 180}
+  switchCamAt: 2
+  camPos: {x: 14.61, y: 0.7, z: -50}
+  camRot: {x: 0, y: 210, z: 0}
   screenFader: {fileID: 83726888}
 --- !u!114 &2091210621
 MonoBehaviour:

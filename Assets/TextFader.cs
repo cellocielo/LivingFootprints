@@ -29,8 +29,7 @@ public class TextFader : MonoBehaviour
         }
 
         textComponent.text = "";
-
-        SceneManager.LoadScene("SampleScene");
+        SceneStateManager.LoadAppropriateScene();
     }
 
     IEnumerator FadeTextAlpha(float from, float to)

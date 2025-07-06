@@ -3,15 +3,22 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour 
 {
-    public static Vector3 spawnPosition;
-
+    public static Vector3 spawnPosition = Vector3.zero;
+    
+    void Awake() 
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+    
     public void SetHouseSpawn() {
         spawnPosition = new Vector3(14, -16, -11);
-        SceneManager.LoadScene("SampleScene");
+        Debug.Log("HOUSE: Setting spawn position to: " + spawnPosition);
+        SceneManager.LoadScene("HouseScene");
     }
-
+    
     public void SetApartmentSpawn() {
-        spawnPosition = new Vector3(2350, -17, 1711);
-        SceneManager.LoadScene("SampleScene");
+        spawnPosition = new Vector3(-12, 1, 3);
+        Debug.Log("APARTMENT: Setting spawn position to: " + spawnPosition);
+        SceneManager.LoadScene("ApartmentScene");
     }
 }
