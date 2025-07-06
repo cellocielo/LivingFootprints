@@ -18,6 +18,7 @@ public class SceneInitializer : MonoBehaviour
     public TimeBasedInteraction timeBasedInteraction;
     public Button openEnergyUsage;
     public DigitalClock clock;
+    public TextMeshProUGUI clockText;
     public GameObject vacuum;
     public Button vacuumX;
     public Button openEnergy;
@@ -62,6 +63,10 @@ public class SceneInitializer : MonoBehaviour
             openEnergyUsage.gameObject.SetActive(true);
             timeMessageText.text = timeBasedInteraction.GetTimeBasedMessage();
             SceneStateManager.showLaundryUI = false;
+            clock.TogglePause();
+            if (DigitalClock.Instance != null) {
+                DigitalClock.Instance.SetClockText(clockText);
+            }
         }
 
         if (SceneStateManager.showPlantsUI) {
@@ -69,7 +74,6 @@ public class SceneInitializer : MonoBehaviour
             plantsX.gameObject.SetActive(true);
             pollutants.gameObject.SetActive(true);
             temperature.gameObject.SetActive(true);
-            clock.TogglePause();
         }
         
         if (SceneStateManager.showVacuumUI) {

@@ -10449,7 +10449,7 @@ Transform:
   m_GameObject: {fileID: 961739749}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -11.200001, y: -3.6999998, z: 75.2}
+  m_LocalPosition: {x: -11.2, y: -3.7, z: 75.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10879,8 +10879,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1280, y: 720}
+  m_AnchoredPosition: {x: 0, y: -6.7817}
+  m_SizeDelta: {x: 1280, y: 1388.8638}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1270695459
 MonoBehaviour:
@@ -11508,8 +11508,8 @@ MonoBehaviour:
   fadeDuration: 1
   displayTime: 4
   switchCamAt: 2
-  camPos: {x: 14.61, y: 0.7, z: -50}
-  camRot: {x: 0, y: 210, z: 0}
+  camPos: {x: -33.34, y: 3.08, z: -13.38}
+  camRot: {x: 0, y: 90, z: 0}
   screenFader: {fileID: 1270695459}
 --- !u!4 &1758362864 stripped
 Transform:

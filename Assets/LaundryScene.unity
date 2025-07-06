@@ -7442,8 +7442,8 @@ MonoBehaviour:
   fadeDuration: 1
   displayTime: 2
   switchCamAt: 2
-  camPos: {x: 14.61, y: 0.7, z: -50}
-  camRot: {x: 0, y: 210, z: 0}
+  camPos: {x: 14.61, y: 1.5, z: -50}
+  camRot: {x: 10, y: 210, z: 0}
   screenFader: {fileID: 1823765492}
 --- !u!4 &1036479007 stripped
 Transform:
@@ -10811,7 +10811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1922854355324890932, guid: 5ad32bd0815de41ee8dd994221326439, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.61
+      value: 13.76
       objectReference: {fileID: 0}
     - target: {fileID: 1922854355324890932, guid: 5ad32bd0815de41ee8dd994221326439, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10819,7 +10819,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1922854355324890932, guid: 5ad32bd0815de41ee8dd994221326439, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.51
+      value: -52.46
       objectReference: {fileID: 0}
     - target: {fileID: 1922854355324890932, guid: 5ad32bd0815de41ee8dd994221326439, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12456,8 +12456,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1280, y: 720}
+  m_AnchoredPosition: {x: 0, y: -77.87622}
+  m_SizeDelta: {x: 1280, y: 1421.9521}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1823765492
 MonoBehaviour:
